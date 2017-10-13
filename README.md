@@ -1,5 +1,4 @@
-# Ice Cream Truck Tracker Project
+# Ice Track Project
 
-* WARNING: CURRENTLY DOES NOT FUNCTION CORRECTLY
 
 
