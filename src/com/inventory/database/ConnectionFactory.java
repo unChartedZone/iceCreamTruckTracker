@@ -46,7 +46,6 @@ public class ConnectionFactory {
     //method checkLogin starts
     public boolean checkLogin(String username,String password, String user){
         if(user=="ADMINISTRATOR"){
-               System.out.println("username: "+username+" password: "+password+" user: "+user);
             String query="SELECT * FROM users WHERE username='"+username+"' AND password='"+password+"' AND category='ADMINISTRATOR'";
             try{
                 rs=stmt.executeQuery(query);
