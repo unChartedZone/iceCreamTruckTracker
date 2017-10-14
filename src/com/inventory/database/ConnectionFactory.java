@@ -19,7 +19,7 @@ public class ConnectionFactory {
     Connection con = null;
     Statement stmt = null;
     ResultSet rs = null;
-    boolean flag=false;
+    boolean flag = false;
     
     //Constructor starts
     public ConnectionFactory(){
@@ -49,9 +49,9 @@ public class ConnectionFactory {
             String query="SELECT * FROM users WHERE username='"+username+"' AND password='"+password+"' AND category='ADMINISTRATOR'";
             try{
                 rs=stmt.executeQuery(query);
-                
+                System.out.println(query);//test line
                 while(rs.next()){
-                    flag=true;
+                    flag = true;
                 }
             }catch(Exception e){
                 e.printStackTrace();
@@ -60,9 +60,8 @@ public class ConnectionFactory {
             String query="SELECT * FROM users WHERE username='"+username+"' AND password='"+password+"'AND category='NORMAL USER'";
             try{
                 rs=stmt.executeQuery(query);
-                
                 while(rs.next()){
-                    flag=true;
+                    flag = true;
                 }
             }catch(Exception e){
                 e.printStackTrace();

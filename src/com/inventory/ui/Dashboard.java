@@ -63,9 +63,9 @@ public class Dashboard extends javax.swing.JFrame {
         //ImageIcon icon=new ImageIcon("userLarge.png");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("ims-logo.png")));
         Toolkit theKit = getToolkit();
-        Dimension dim = theKit.getScreenSize();   //get your screen size
-        setSize(dim);     //set application to your screen size.
-        setTitle("Tom & Adam's Ice Tracker");
+        Dimension dim = theKit.getScreenSize();
+        setSize(dim);
+        setTitle("Inventory Management System");
         setLocationRelativeTo(null);
         setVisible(true);
     }
