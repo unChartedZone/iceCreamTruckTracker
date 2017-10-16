@@ -53,6 +53,7 @@ public class Dashboard extends javax.swing.JFrame {
         mainPanel.add("Tenth", new SalesReport(username));
         mainPanel.add("Eleventh", new Purchase());
         mainPanel.add("Twelvth", new About());
+        mainPanel.add("Thirteenth", new TroubleTicket());
         layout.next(mainPanel);
         layout.next(mainPanel);
                 
@@ -63,9 +64,9 @@ public class Dashboard extends javax.swing.JFrame {
         //ImageIcon icon=new ImageIcon("userLarge.png");
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("ims-logo.png")));
         Toolkit theKit = getToolkit();
-        Dimension dim = theKit.getScreenSize();
-        setSize(dim);
-        setTitle("Inventory Management System");
+        Dimension dim = theKit.getScreenSize();   //get your screen size
+        setSize(dim);     //set application to your screen size.
+        setTitle("Tom & Adam's Ice Tracker");
         setLocationRelativeTo(null);
         setVisible(true);
     }
@@ -109,6 +110,10 @@ public class Dashboard extends javax.swing.JFrame {
     public void addAboutPage() {
         layout.show(mainPanel, "Twelvth");
     }
+    
+    public void addTicketPage(){
+        layout.show(mainPanel, "Thirteenth");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -138,6 +143,8 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         purchaseBttn = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        tickBttn = new javax.swing.JButton();
+        tickLabel = new javax.swing.JLabel();
         menuPanel = new javax.swing.JPanel();
         menuBttn = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -278,57 +285,70 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel7.setText("Purchase");
 
+        tickBttn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/inventory/ui/images/troubleTicket.png"))); // NOI18N
+        tickBttn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tickBttnMouseClicked(evt);
+            }
+        });
+
+        tickLabel.setText("Trouble Tickets");
+
         javax.swing.GroupLayout navPanelLayout = new javax.swing.GroupLayout(navPanel);
         navPanel.setLayout(navPanelLayout);
         navPanelLayout.setHorizontalGroup(
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabel5))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(suppliersBttn))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(addProductBttn))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel6))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
                 .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jLabel4))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(14, 14, 14)
+                            .addComponent(jLabel5))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(suppliersBttn))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(addProductBttn))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(5, 5, 5)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(16, 16, 16)
+                            .addComponent(jLabel6))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(15, 15, 15)
+                            .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(userBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(navPanelLayout.createSequentialGroup()
+                                    .addGap(10, 10, 10)
+                                    .addComponent(userLab))
+                                .addComponent(salesReportBttn)))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(15, 15, 15)
+                            .addComponent(customersBttn))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(15, 15, 15)
+                            .addComponent(jLabel3))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(14, 14, 14)
+                            .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(purchaseBttn)
+                                .addComponent(jLabel7)))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(currentStocksBttn))
+                        .addGroup(navPanelLayout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(salesReportLab)))
                     .addGroup(navPanelLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(userLab))
-                    .addComponent(userBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(customersBttn))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel3))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(purchaseBttn)
-                    .addComponent(jLabel7)))
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(currentStocksBttn))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
+                        .addContainerGap()
+                        .addComponent(tickBttn))
+                    .addComponent(tickLabel))
                 .addContainerGap())
-            .addGroup(navPanelLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(navPanelLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(salesReportLab))
-                    .addComponent(salesReportBttn)))
         );
         navPanelLayout.setVerticalGroup(
             navPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,7 +383,11 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(userBttn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(userLab)
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(tickBttn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tickLabel)
+                .addContainerGap(266, Short.MAX_VALUE))
         );
 
         menuPanel.setPreferredSize(new java.awt.Dimension(61, 16));
@@ -383,7 +407,7 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(menuPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(menuBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1556, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         menuPanelLayout.setVerticalGroup(
             menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -456,7 +480,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1665, Short.MAX_VALUE)
+            .addComponent(menuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1674, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -544,6 +568,10 @@ public class Dashboard extends javax.swing.JFrame {
         addAboutPage();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void tickBttnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tickBttnMouseClicked
+        addTicketPage();
+    }//GEN-LAST:event_tickBttnMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -608,6 +636,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel salesReportBttn;
     private javax.swing.JLabel salesReportLab;
     private javax.swing.JLabel suppliersBttn;
+    private javax.swing.JButton tickBttn;
+    private javax.swing.JLabel tickLabel;
     private javax.swing.JLabel userBttn;
     private javax.swing.JLabel userLab;
     // End of variables declaration//GEN-END:variables

@@ -115,7 +115,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Name: Sajan Rajbhandari"/>
+                <Property name="text" type="java.lang.String" value="Devs: Christian, Ari, Alex, Tom, Jay, Milad, Elliott"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
@@ -126,7 +126,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Email Id: sazanrjb@gmail.com"/>
+                <Property name="text" type="java.lang.String" value="Team: Metajac"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -148,7 +148,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Website: http://sazanrjb.com.np"/>
+                <Property name="text" type="java.lang.String" value="Website: http://metajac.dev"/>
               </Properties>
             </Component>
           </SubComponents>

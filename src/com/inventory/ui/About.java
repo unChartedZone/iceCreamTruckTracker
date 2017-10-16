@@ -43,11 +43,11 @@ public class About extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("Comfortaa", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("Name: Sajan Rajbhandari");
+        jLabel2.setText("Devs: Christian, Ari, Alex, Tom, Jay, Milad, Elliott");
 
         jLabel3.setFont(new java.awt.Font("Comfortaa", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel3.setText("Email Id: sazanrjb@gmail.com");
+        jLabel3.setText("Team: Metajac");
 
         jLabel4.setFont(new java.awt.Font("Comfortaa", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 102));
@@ -55,7 +55,13 @@ public class About extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Comfortaa", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel5.setText("Website: http://sazanrjb.com.np");
+        jLabel5.setText("Website: http://metajac.dev");
+
+        jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -86,11 +92,6 @@ public class About extends javax.swing.JPanel {
                 .addComponent(jLabel5)
                 .addContainerGap(71, Short.MAX_VALUE))
         );
-        jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
