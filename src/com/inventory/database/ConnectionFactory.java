@@ -19,7 +19,7 @@ public class ConnectionFactory {
     Connection con = null;
     Statement stmt = null;
     ResultSet rs = null;
-    boolean flag=false;
+    boolean flag=true;
     
     //Constructor starts
     public ConnectionFactory(){
