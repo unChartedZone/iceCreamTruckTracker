@@ -19,33 +19,11 @@ import javax.swing.UnsupportedLookAndFeelException;
  */
 public class InventoryManagementSystem {
 
-    /**
-     * @param args the command line arguments
-     */
     public InventoryManagementSystem(int a){
-    /*    if(a==1){
-            try{
-                Properties p=new Properties();
-                p.put("logoString","IMS");
-                HiFiLookAndFeel.setCurrentTheme(p);
-                UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");  
-           }catch(ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e){
-               e.printStackTrace();
-           }
-        }else if(a==2){
-            try{
-                Properties p=new Properties();
-                p.put("logoString","IMS");
-                GraphiteLookAndFeel.setCurrentTheme(p);
-                UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
-           }catch(ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e){
-               e.printStackTrace();
-           }
-        } */
     }
 
     public static void main(String[] args) {
-     //   f.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("/images/addPeople.png")));  
+        // Sets Nimbus Look and Feel
             try{
                 Properties p=new Properties();
                 p.put("logoString","IMS");
@@ -55,13 +33,7 @@ public class InventoryManagementSystem {
             }catch(ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e){
                e.printStackTrace();
             }
-        
 
-//        LoginDialog ld=new LoginDialog();
-//        ld.setLocationRelativeTo(null);
-//        ld.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//        ld.setVisible(true);
-//        com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -69,7 +41,6 @@ public class InventoryManagementSystem {
                     break;
                 }
             }
-            System.out.println("Fucking test");
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(LoginDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
@@ -79,7 +50,6 @@ public class InventoryManagementSystem {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LoginDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
